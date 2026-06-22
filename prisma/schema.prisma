@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Leaderboard {
+  id       String   @id @default(cuid())
+  username String
+  score    Int
+  date     DateTime @default(now())
+
+  @@index([score(sort: Desc)])
+}
