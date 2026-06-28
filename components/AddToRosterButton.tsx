@@ -23,9 +23,9 @@ export default function AddToRosterButton({ pokemon }: { pokemon: PokemonSummary
     return (
       <button
         disabled
-        className="rounded-lg bg-green-100 px-4 py-2 text-sm font-medium text-green-700"
+        className="rounded-lg bg-accent/15 px-4 py-2 text-sm font-medium text-accent ring-1 ring-accent/30"
       >
-        Added to roster
+        ✓ Added to roster
       </button>
     );
   }
@@ -34,7 +34,7 @@ export default function AddToRosterButton({ pokemon }: { pokemon: PokemonSummary
     return (
       <button
         disabled
-        className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-400"
+        className="rounded-lg bg-surface-hover px-4 py-2 text-sm font-medium text-muted ring-1 ring-border"
       >
         Roster full ({ROSTER_MAX} max)
       </button>
@@ -44,9 +44,9 @@ export default function AddToRosterButton({ pokemon }: { pokemon: PokemonSummary
   return (
     <button
       onClick={handleClick}
-      className="rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-700"
+      className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:scale-105 hover:bg-accent-hover hover:shadow-md hover:shadow-accent/30"
     >
-      Add to Roster
+      + Add to Roster
     </button>
   );
 }
